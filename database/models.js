@@ -8,15 +8,10 @@ const Users = model(
         id: Number,
         name: String,
         balance: defaultType(Number, 0),
-        rubBalance: defaultType(Number, 0),
+        territoryLevel: defaultType(Number, 0),
+        rub: defaultType(Number, 0),
         phone: defaultType(String, ''),
         invested: defaultType(Number, 0),
-        forTopSymbol: defaultType(String, ""),
-        tolyaGiveHimDollars: defaultType(Boolean, false),
-        withdrawnBalance: defaultType(Number, 0),
-        privilege: defaultType(String, "None"),
-        lastGet: defaultType(Number, Date.now() - 86500000),
-        avatar: defaultType(Number, 0),
         ban: defaultType(Boolean, false),
         admin: Boolean,
         ref: {
@@ -27,13 +22,13 @@ const Users = model(
             },
         },
         lastEarn: defaultType(Number, Date.now()),
-        businesses: defaultType(Object, {
-            market: 0,
-            hospital: 0,
-            motel: 0,
-            theatre: 0,
-            hotel: 0,
-            airoport: 0,
+        growned: defaultType(Object, {
+            carrot: 0,
+            corn: 0,
+            apple: 0,
+            tomato: 0,
+            strawberry: 0,
+            berry: 0,
         }),
     })
 );
@@ -44,24 +39,14 @@ const Dep = model(
         id: Number,
         userId: Number,
         sum: Number,
+        payload: Number
     })
-);
-
-const rubDep = model(
-     "RubDeps",
-     new Schema({
-         id: Number, 
-         userId: Number,
-         sum: Number
-      })
 );
 
 const Global = model(
     'Global',
     new Schema({
         name: defaultType(String, 'Global'),
-        percentCourse: defaultType(Number, 1.5),
-        buyCourse: defaultType(Number, 16000)
     })
 );
 
@@ -78,8 +63,7 @@ const Withdraw = model(
     'withdraw',
     new Schema({
         userId: Number,
-        amount: Number,
-        countRefs: Number,
+        amount: Number
     })
 )
 
@@ -88,6 +72,5 @@ module.exports = {
     Dep,
     Global,
     BonuseModel,
-    Withdraw,
-    rubDep
+    Withdraw
 };

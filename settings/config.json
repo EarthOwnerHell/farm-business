@@ -1,7 +1,7 @@
 {
-    "token": "9f0396a4b1e81b3393e874da647ea7d28973388a87d4d8a08a15311c2494caf1a5edc71b7136e5e3ef331",
-    "keksikToken": "40a4563257a8c47e3df196af58c3e8ba650ef42605875d4de1",
-    "qiwiToken": "14459d8a5b4bcca31dde2318029e3b38",
+    "token": "2b5ae87a8fc7c9d57326a1a8313832ea14c2a84ad1eba16cfe861e8d6a435d12224ce0d86528a3f172ee4",
+    "keksikToken": "",
+    "qiwiToken": "",
     "urlDb": "mongodb+srv://birds-admin:HuyktouznaeT1@birds-invest.whykk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "groupId": 209099092
+    "groupId": 210887504
 }

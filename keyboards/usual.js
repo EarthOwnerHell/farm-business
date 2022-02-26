@@ -25,30 +25,24 @@ const adminButton = (label, admin = label, color = Keyboard.SECONDARY_COLOR) => 
 const mainBoard = (admin) => (
     Keyboard.keyboard([
         [
-            textButton('🐣 Профиль', 'profile', green)  
+            textButton('👤 Профиль', 'profile', green)  
         ],
         [
-            textButton('💵 Инвестировать', 'business', red),
-            (textButton('😎 Привилегии', "privileges", Keyboard.POSITIVE_COLOR))
+            textButton('💰 Финансы', 'finances', red),
+            (textButton('🌾 Склад', "warehouse", red))
         ],
         [
-            callBack('🎁 Рефералы', 'refs', blue), textButton('💳 Кошелек', 'wallet', blue),
+            textButton('💸 Магазин', 'market', blue),
         ],
         [
-            textButton('📊 Статистика', 'info', green)
+            textButton('📊 Статистика', 'info', green), 
+            textButton('💡 Реферальная система', 'ref', red), 
         ],
         admin ? [
             adminButton('Админка', 'admin', red)
         ] : [ ]
     ])
 )
-
-const exitButton = Keyboard.keyboard([
-    [
-        textButton('Отмена', 'exit', red)
-    ]
-])
-
 
 const adminMenu = Keyboard.keyboard([
     [
@@ -58,19 +52,10 @@ const adminMenu = Keyboard.keyboard([
         adminButton('Рассылка', 'mailing', green)
     ],
     [
-        adminButton('Хак процент', 'hackPercent', blue)
-    ],
-    [
         adminButton('Выдать бан', 'giveBan', green)
     ],
     [
         adminButton('Выдать баланс', 'giveBalance', blue)
-    ],
-    [
-        adminButton('Курс при пополнении', 'courseBuy', green)
-    ],
-     [
-        adminButton('Выдать привилегию', 'givePrivilege', grey)
     ],
     [
         textButton('Назад', 'back', red)
@@ -81,5 +66,4 @@ const adminMenu = Keyboard.keyboard([
 module.exports = {
     mainBoard,
     adminMenu,
-    exitButton
 }

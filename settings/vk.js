@@ -19,16 +19,6 @@ const vkMsg = (peer_id, message, attachment) => (
     })
 )
 
-const vkMsgForPrivileges = (peer_id, message, attachment, keyboard) => (
-    api.messages.send({
-        peer_id,
-        message,
-        attachment,
-        random_id: getRandomId(),
-        keyboard: keyboard
-    })
-)
-
 const vkMsgKeyboard = (peer_id, message, keyboard) => (
     api.messages.send({
         peer_id,
@@ -55,5 +45,4 @@ module.exports = {
     vkMsgKeyboard,
     questionManager,
     getId,
-    vkMsgForPrivileges
 }

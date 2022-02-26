@@ -3,9 +3,6 @@ const eventManager = require('./managers/eventManager');
 const connectDb = require('./database/connect');
 const adminManager = require('./managers/admin');
 const newDonate = require('./settings/keksik.js');
-const buyBusiness = require('./pages/business/buyBusiness');
-const getInfo = require('./pages/business/info');
-const buyPrivilege = require('./pages/privilegesPage/buyPrivilege')
 
 const {
     getUser,
@@ -16,13 +13,11 @@ const {
     minusBusinessUser,
 } = require('./database/manager/user');
 
-const { Users } = require('./database/models')
-
 const { vk, getVkNameById, vkMsg } = require('./settings/vk');
 const { mainBoard } = require('./keyboards/usual');
 const { autoCreateGlobal } = require('./database/manager/global');
 const { getBonusePost, addUserRepost } = require('./database/manager/bonuse');
-const { numberWithSpace, howToPlay, userReg } = require('./tools');
+const { numberWithSpace, userReg } = require('./tools');
 const { getRandomId } = require('vk-io');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -30,7 +25,7 @@ const cors = require('cors');
 
 const v = 1;
 
-const app = express();
+/*const app = express();
 
 app.use(cors());
 
@@ -60,6 +55,7 @@ app.post('/api', (res, req) => {
 });
 
 app.listen(5000, () => console.log('--> Сервер включен...'));
+*/
 
 connectDb();
 
@@ -147,35 +143,24 @@ try {
         // if (!msg.user.admin) return
 
         if (!msg.user) {
-            msg.send('🎉 Добро пожаловать', {
+            msg.send('👨‍🌾 Привет! Это твоя онлайн-ферма с заработком реальных денег. Нажимай по кнопкам. ', {
                 keyboard: mainBoard(false),
-            });
-
-            msg.send({
-                message: 'Обучение',
-                template: howToPlay,
-                random_id: getRandomId(),
             });
 
             const name = await getVkNameById(msg.senderId);
 
             const newUser = await createUser({
                 id: msg.senderId,
-                name: name,
-                refferer: msg.referralValue,
+                name: name
             });
         }
 
         if (msg.user?.ban) return msg.send('Вы были забанены.');
-        
-        if (msg.user?.buyPrivilegeStatus == "wantBuy") return
-
+    
         if (['меню', 'начать', 'главное меню'].includes(msg.text.toLowerCase()))
             return msg.send('Главное меню', {
                 keyboard: mainBoard(msg.user.admin),
             });
-
-        if (msg.messagePayload?.privilege) return buyPrivilege(msg);
         
         if (msg.messagePayload?.command) return userManager(msg);
 
@@ -196,10 +181,6 @@ vk.updates.on('message_event', async (msg) => {
     }
 
     // console.log(msg.eventPayload)
-
-    if (msg.eventPayload.infoUpgrade) getInfo(msg);
-
-    if (msg.eventPayload.buyUpgrade) buyBusiness(msg);
 });
 
 vk.updates.start().then(console.log('--> Бот запущен.'));

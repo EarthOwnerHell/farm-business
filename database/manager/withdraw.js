@@ -2,11 +2,10 @@ const { Withdraw } = require('../models.js');
 
 const userWithdraw = {
 
-    create: (userId, amount, countRefs) => {
+    create: (userId, amount) => {
         const newWithdraw = new Withdraw({
             userId,
             amount,
-            countRefs,
         });
 
         newWithdraw.save().then()

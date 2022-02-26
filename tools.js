@@ -69,14 +69,14 @@ function getConvertedArray(array, splitBy = 99) {
 
     return mainChunc.map((childArr) => childArr.join(','));
 }
-
+/*
 const howToPlay = JSON.stringify({
     type: 'carousel',
     elements: [
         {
             title: '📖 Введение',
             description: `👆 Свайпайте для продолжения`,
-            photo_id: '-209099092_457239103',
+            photo_id: '-210887504_457239103',
             buttons: [
                 {
                     action: {
@@ -92,13 +92,13 @@ const howToPlay = JSON.stringify({
         {
             title: '🤑 Бот с заработком денег!',
             description: `👆 Свайпайте для продолжения`,
-            photo_id: '-209099092_457239104',
+            photo_id: '-210887504_457239104',
             buttons: [
                 {
                     action: {
                         type: 'open_link',
                         label: '✏ Посмотреть отзывы',
-                        link: `https://vk.com/topic-209099092_48256724`,
+                        link: `https://vk.com/topic-210887504_48256724`,
                     },
                 },
             ],
@@ -106,7 +106,7 @@ const howToPlay = JSON.stringify({
         {
             title: '🎉 Покупай валюту и покупай точки',
             description: `👆 Свайпайте для продолжения`,
-            photo_id: '-209099092_457239105',
+            photo_id: '-210887504_457239105',
             buttons: [
                 {
                     action: {
@@ -122,7 +122,7 @@ const howToPlay = JSON.stringify({
         {
             title: '☕ Пассивный заработок от купленных точек',
             description: `👆 Свайпайте для продолжения`,
-            photo_id: '-209099092_457239106',
+            photo_id: '-210887504_457239106',
             buttons: [
                 {
                     action: {
@@ -138,7 +138,7 @@ const howToPlay = JSON.stringify({
         {
             title: '💳 Операции с деньгами в кошельке',
             description: `👆 Свайпайте для продолжения`,
-            photo_id: '-209099092_457239128',
+            photo_id: '-210887504_457239128',
             buttons: [
                 {
                     action: {
@@ -154,7 +154,7 @@ const howToPlay = JSON.stringify({
     ],
 });
 
-
+*/
 const userReg = async (id) => {
     let now;
 
@@ -181,7 +181,6 @@ module.exports = {
     formClick,
     processArray,
     getConvertedArray,
-    howToPlay,
     userReg,
     getLength
 };
