@@ -1,8 +1,4 @@
-const { getGlobal } = require('../database/manager/global')
-const { inlineProfileBoard, inlineProfileBoardPrivilege } = require('../keyboards/inline')
-const { numberWithSpace, deckOfNum } = require('../tools')
-const parsePhoneNumber = require('libphonenumber-js')
-
+const { numberWithSpace } = require('../tools')
 
 module.exports = getProfile = async (msg) => {
     const { name, territoryLevel, balance } = msg.user
