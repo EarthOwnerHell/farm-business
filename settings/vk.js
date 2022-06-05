@@ -19,6 +19,30 @@ const vkMsg = (peer_id, message, attachment) => (
     })
 )
 
+const msg = (props) => {
+
+    const { peer_id, message, attachment, keyboard } = props
+
+    api.messages.send({
+        peer_id,
+        message,
+        attachment,
+        keyboard,
+        random_id: getRandomId()
+    })
+
+}
+
+const vkMsgForPrivileges = (peer_id, message, attachment, keyboard) => (
+    api.messages.send({
+        peer_id,
+        message,
+        attachment,
+        random_id: getRandomId(),
+        keyboard: keyboard
+    })
+)
+
 const vkMsgKeyboard = (peer_id, message, keyboard) => (
     api.messages.send({
         peer_id,
@@ -27,6 +51,35 @@ const vkMsgKeyboard = (peer_id, message, keyboard) => (
         random_id: getRandomId()
     })
 )
+
+const messageEdit = (props) => {
+    let { peer_id, message_id, message } = props
+
+    api.messages.edit({
+        peer_id,
+        message_id,
+        message
+    }).catch((e) => {
+        console.log(e)
+        message += `\n\n❗ Что-то пошло не так, отправили вам сообщение`
+
+        msg({ peer_id, message })
+    })
+
+} 
+
+const getLastBotMessage = async (userId) => {
+    const { items } = await api.messages.getHistory({
+        count: 1,
+        user_id: userId,
+        peer_id: userId,
+        start_message_id: -1,
+    })
+
+    const { id } = items[0]
+
+    return id
+}
 
 const getVkNameById = async (id) => {
     const [data] = await api.users.get({
@@ -45,4 +98,7 @@ module.exports = {
     vkMsgKeyboard,
     questionManager,
     getId,
+    vkMsgForPrivileges,
+    messageEdit,
+    getLastBotMessage
 }
