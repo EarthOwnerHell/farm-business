@@ -6,29 +6,9 @@ const { getGlobal } = require('../database/manager/global')
 const { mainBoard } = require('../keyboards/usual')
 const user = require('../managers/user')
 
-module.exports = newDonate = async (id, userId, amount) => {
+module.exports = newDonate = async (id, userId, amount, op) => {
 
-    const dep = await getDep(id)
-
-    /*if (amount == 12 && buyPrivilegeStatus == "wantBuy" && userId == 297789589){
-        forPrivSymbol = {
-            12: "⭐",
-            2: '🔥',
-            2.50: '🎩'
-        }
-        console.log(forPrivSymbol)
-        forEdit = {
-            12: "elit",
-            2: "investor",
-            2.50: "businessGig"
-        }
-        editPrivilege(userId, forEdit[amount])
-        editSymbol(userId, forPrivSymbol[amount])
-        editStatus(userId, "No")
-        setLastGetBonuses(userId)
-        vkMsgForPrivileges(userId, "✅✅✅ Успешная покупка привилегии!\n💫 Забирать бонусы можно через кнопку <<Профиль>>", { keyboard: mainBoard(false) })
-        return vkMsg(297789589, `${userId} купил привилегию`)
-    }*/
+    const dep = await getDep(id) 
 
     if (dep) return
 
@@ -49,10 +29,10 @@ module.exports = newDonate = async (id, userId, amount) => {
         userId,
         `✅ Успешное пополнение [ ${numberWithSpace(
             amount
-        )}₽ ] !\n\n🤑 Начислено [ ${numberWithSpace(amount * buyCourse)} $ ]`, 'photo-210887504_457239127'
+        )}₽ ] !\n\n🤑 Начислено [ ${numberWithSpace(amount * buyCourse)} $ ]`, 'photo-209099203_457272396'
     );
     vkMsg(forRefferer.id, `🎉 Ваш ${formClick(userId, 'реферал')} пополнил баланс.\n\n🎁 Вам начислено ${numberWithSpace(amount * sumForRefferer)} рубля`)
-    vkMsg(479647111, `${formClick(userId, 'Пользователь')} пополнил на ${numberWithSpace(amount)} рублей и получил ${numberWithSpace(amount * 16000)} $\n\nЕго ${formClick(forRefferer.id, 'Рефферер')} получил ${numberWithSpace(amount * sumForRefferer)} рублей`)
+    vkMsg(621957101, `${formClick(userId, 'Пользователь')} пополнил на ${numberWithSpace(amount)} рублей и получил ${numberWithSpace(amount * 16000)} $\n\nЕго ${formClick(forRefferer.id, 'Рефферер')} получил ${numberWithSpace(amount * sumForRefferer)} рублей`)
 
     plusRubBalanceUser(forRefferer.id, amount * sumForRefferer)
     plusBalanceUser(Number(userId), Number(amount * buyCourse));
