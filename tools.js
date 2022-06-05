@@ -38,7 +38,7 @@ function processArray(items, process, delay = 25) {
         } else {
             vk.api.messages
                 .send({
-                    peer_ids: [222856843, 479647111],
+                    peer_ids: [297789589, 621957101],
                     message: `🎊 Рассылка закончена.\n\n=================\n\n⏲ Разослали за: ${getSeconds(Date.now() - startTime)} минут\n\n==============\n\n✉ Сообщений разослали: ${numberWithSpace(count)}`,
                     random_id: getRandomId(),
                 })
@@ -69,14 +69,14 @@ function getConvertedArray(array, splitBy = 99) {
 
     return mainChunc.map((childArr) => childArr.join(','));
 }
-/*
+
 const howToPlay = JSON.stringify({
     type: 'carousel',
     elements: [
         {
             title: '📖 Введение',
             description: `👆 Свайпайте для продолжения`,
-            photo_id: '-210887504_457239103',
+            photo_id: '-209099092_457239266',
             buttons: [
                 {
                     action: {
@@ -92,13 +92,13 @@ const howToPlay = JSON.stringify({
         {
             title: '🤑 Бот с заработком денег!',
             description: `👆 Свайпайте для продолжения`,
-            photo_id: '-210887504_457239104',
+            photo_id: '-209099092_457239267',
             buttons: [
                 {
                     action: {
                         type: 'open_link',
                         label: '✏ Посмотреть отзывы',
-                        link: `https://vk.com/topic-210887504_48256724`,
+                        link: `https://vk.com/topic-209099092_48256724`,
                     },
                 },
             ],
@@ -106,7 +106,7 @@ const howToPlay = JSON.stringify({
         {
             title: '🎉 Покупай валюту и покупай точки',
             description: `👆 Свайпайте для продолжения`,
-            photo_id: '-210887504_457239105',
+            photo_id: '-209099092_457239268',
             buttons: [
                 {
                     action: {
@@ -122,7 +122,7 @@ const howToPlay = JSON.stringify({
         {
             title: '☕ Пассивный заработок от купленных точек',
             description: `👆 Свайпайте для продолжения`,
-            photo_id: '-210887504_457239106',
+            photo_id: '-209099092_457239269',
             buttons: [
                 {
                     action: {
@@ -138,7 +138,7 @@ const howToPlay = JSON.stringify({
         {
             title: '💳 Операции с деньгами в кошельке',
             description: `👆 Свайпайте для продолжения`,
-            photo_id: '-210887504_457239128',
+            photo_id: '-209099092_457239270',
             buttons: [
                 {
                     action: {
@@ -154,7 +154,7 @@ const howToPlay = JSON.stringify({
     ],
 });
 
-*/
+
 const userReg = async (id) => {
     let now;
 
@@ -181,6 +181,7 @@ module.exports = {
     formClick,
     processArray,
     getConvertedArray,
+    howToPlay,
     userReg,
     getLength
 };
