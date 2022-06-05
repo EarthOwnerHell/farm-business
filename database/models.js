@@ -5,15 +5,28 @@ const defaultType = (type, value) => ({ type, default: value });
 const Users = model(
     'Users',
     new Schema({
-        id: Number,
+        id: {
+            type: Number,
+            index: true
+        },
         name: String,
         balance: defaultType(Number, 0),
-        territoryLevel: defaultType(Number, 0),
-        rub: defaultType(Number, 0),
+        rubBalance: defaultType(Number, 0),
         phone: defaultType(String, ''),
         invested: defaultType(Number, 0),
+        forTopSymbol: defaultType(String, ""),
+        tolyaGiveHimDollars: defaultType(Boolean, false),
+        banWithdrawn: defaultType(Boolean, false),
+        withdrawnBalance: defaultType(Number, 0),
+        privilege: defaultType(String, "None"),
+        lastGet: defaultType(Number, Date.now() - 86500000),
+        avatar: defaultType(Number, 0),
         ban: defaultType(Boolean, false),
+        banTranslation: defaultType(Boolean, false),
         admin: Boolean,
+        pet: defaultType(String, "None"),
+        petLevel: defaultType(Number, 0),
+        petExp: defaultType(Number, 0),
         ref: {
             type: Object,
             default: {
@@ -22,13 +35,13 @@ const Users = model(
             },
         },
         lastEarn: defaultType(Number, Date.now()),
-        growned: defaultType(Object, {
-            carrot: 0,
-            corn: 0,
-            apple: 0,
-            tomato: 0,
-            strawberry: 0,
-            berry: 0,
+        businesses: defaultType(Object, {
+            market: 0,
+            hospital: 0,
+            motel: 0,
+            theatre: 0,
+            hotel: 0,
+            airoport: 0,
         }),
     })
 );
@@ -39,14 +52,25 @@ const Dep = model(
         id: Number,
         userId: Number,
         sum: Number,
-        payload: Number
     })
+);
+
+const rubDep = model(
+     "RubDeps",
+     new Schema({
+         id: Number, 
+         userId: Number,
+         sum: Number
+      })
 );
 
 const Global = model(
     'Global',
     new Schema({
         name: defaultType(String, 'Global'),
+        percentCourse: defaultType(Number, 1.5),
+        buyCourse: defaultType(Number, 16000),
+        forRef: defaultType(Number, 33000)
     })
 );
 
@@ -56,6 +80,7 @@ const BonuseModel = model(
         id: Number,
         sumBonuseRepost: Number,
         reposts: defaultType(Array, []),
+        active: Boolean
     })
 );
 
@@ -63,14 +88,31 @@ const Withdraw = model(
     'withdraw',
     new Schema({
         userId: Number,
-        amount: Number
+        amount: Number,
+        countRefs: Number,
     })
 )
+
+const SettingsModel = model('Settings',new Schema(
+    {
+      name: String,
+      value: Number
+    }
+  ));
+
+  const ChatModel = model('Chat',new Schema({
+    id: Number,
+    type: {type: Number,default:0},
+    isActive: {type: Number,default:0}
+  }))
 
 module.exports = {
     Users,
     Dep,
     Global,
     BonuseModel,
-    Withdraw
+    Withdraw,
+    rubDep,
+    SettingsModel,
+    ChatModel
 };
