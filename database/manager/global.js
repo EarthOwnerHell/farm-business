@@ -26,6 +26,16 @@ const setNewPercent = (percent) => (
     }).then(console.log(`--> SCAMMING SHIIIT Сменили процент на ${percent}`))
 )
 
+const setForRef = (sum) => (
+    Global.findOneAndUpdate({
+        name: 'Global'
+    }, {
+        $set: {
+            'forRef': sum
+        }
+    }).then(console.log(`--> Сменили сумму за рефа на ${sum}`))
+)
+
 const setBuyCourse = (value) => {
     Global.findOneAndUpdate({
         name: 'Global'
@@ -41,4 +51,5 @@ module.exports = {
     autoCreateGlobal,
     setNewPercent,
     setBuyCourse,
+    setForRef
 };
