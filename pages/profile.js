@@ -81,7 +81,7 @@ module.exports = getProfile = async (msg) => {
     text = (`⚙ Ваш профиль:\n\n💵 Баланс: ${numberWithSpace(balance)} $\n🔗 ${res2}: ${numberWithSpace(value)} ${res}\n\n💳 Инвестировано: ${numberWithSpace(sumPrice / 16000)}₽\n💰 Суточный доход: ${numberWithSpace((sumPrice / 16000) < 200 ? (countBusinesses + (countBusinesses / 10)) : countBusinesses)} $\n\n⚡ Можно вывести: ${numberWithSpace(earned$ / (16000+ earned$ * percentCourse/100) + Number(rubBalance))}₽\n📱 Номер: ${phone ? phoneNumber.formatInternational() : '❗ Не указан'}`)
     privilege != "None" ? text += `\n\n👤 Ваша привилегия: ${forText[privilege]}` : ''
     return msg.send(text, {
-        attachment: "photo621957101_457240327",
+        attachment: "photo-211465984_457239034",
         keyboard: privilege != "None" ? inlineProfileBoardPrivilege(phone, avatar) : inlineProfileBoard(phone, avatar)
     })
 
