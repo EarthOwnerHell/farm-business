@@ -39,13 +39,6 @@ module.exports = getProfile = async (msg) => {
          "cat": 0.35
     }
 
-    const avatars = {
-        1: 'photo-209099203_457272400',
-        2: 'photo-209099203_457272399',
-        3: 'photo-209099203_457272398',
-        4: 'photo-209099203_457272397',
-    };
-
     forText = {
         "elit": "Элита",
         "investor": "Инвестор",
@@ -88,7 +81,7 @@ module.exports = getProfile = async (msg) => {
     text = (`⚙ Ваш профиль:\n\n💵 Баланс: ${numberWithSpace(balance)} $\n🔗 ${res2}: ${numberWithSpace(value)} ${res}\n\n💳 Инвестировано: ${numberWithSpace(sumPrice / 16000)}₽\n💰 Суточный доход: ${numberWithSpace((sumPrice / 16000) < 200 ? (countBusinesses + (countBusinesses / 10)) : countBusinesses)} $\n\n⚡ Можно вывести: ${numberWithSpace(earned$ / (16000+ earned$ * percentCourse/100) + Number(rubBalance))}₽\n📱 Номер: ${phone ? phoneNumber.formatInternational() : '❗ Не указан'}`)
     privilege != "None" ? text += `\n\n👤 Ваша привилегия: ${forText[privilege]}` : ''
     return msg.send(text, {
-        attachment: attach,
+        attachment: "photo621957101_457240327",
         keyboard: privilege != "None" ? inlineProfileBoardPrivilege(phone, avatar) : inlineProfileBoard(phone, avatar)
     })
 
