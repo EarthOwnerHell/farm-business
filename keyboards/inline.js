@@ -103,9 +103,6 @@ const inlineProfileBoard = (qiwiChanged, avatarChanged) => (
             textButton(qiwiChanged ? '✏ Сменить QIWI номер' : '✏ Указать QIWI номер' , 'changeQiwi', qiwiChanged ? green : red)
         ],
         [
-            textButton(avatarChanged ? '😎 Сменить персонажа' : '🎩 Выбрать персонажа', 'changeAvatar', avatarChanged ? green : red)
-        ],
-        [
             textButton('🐶 Твой питомец', 'myPet', blue)
         ],
     ]).inline()
@@ -117,10 +114,7 @@ const inlineProfileBoardPrivilege = (qiwiChanged, avatarChanged) => (
             textButton(qiwiChanged ? '✏ Сменить QIWI номер' : '✏ Указать QIWI номер' , 'changeQiwi', qiwiChanged ? green : red)
         ],
         [
-            textButton(avatarChanged ? '😎 Сменить персонажа' : '🎩 Выбрать персонажа', 'changeAvatar', avatarChanged ? green : red)
-        ],
-        [
-            textButton('⚙ Управление привилегией', "managmentPrivilege", Keyboard.NEGATIVE_COLOR,)
+            textButton('⚙ Управление улучшением', "managmentPrivilege", Keyboard.NEGATIVE_COLOR,)
         ],
         [
             textButton('🐶 Твой питомец', 'myPet', blue)
