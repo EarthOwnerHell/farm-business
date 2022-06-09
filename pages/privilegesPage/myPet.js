@@ -5,28 +5,28 @@ module.exports = async(msg) => {
 const { pet, id, petLevel, petExp } = msg.user
 if (pet == "None") return msg.send("😫 У вас нет пета! Приобрести пета можно в магазине привилегий.")
 const petName = {
-"rabbit": "Кролик",
-"coala": "Коала",
-"penguin": "Пингвин",
-"cat": "Котик",
-"dog": "Собака",
-"deer": "Оленёнок"
+"frog": "Лягух",
+"fox": "Лиса",
+"chick": "Птенец",
+"tiger": "Тигр",
+"cow": "Коровка",
+"pig": "Свинка"
 }
 const petPercent = {
-"rabbit": 3,
-"coala": 12,
-"penguin": 18,
-"cat": 35,
-"dog":  26,
-"deer": 7
+"frog": 3,
+"fox": 7,
+"chick": 12,
+"tiger": 18,
+"cow": 26,
+"pig": 35
 }
 const petPhoto = {
-"rabbit": "photo-209099203_457288732",
-"coala": "photo-209099203_457288734",
-"penguin": "photo-209099203_457288735",
-"cat": "photo-209099203_457288737",
-"dog": "photo-209099203_457288736",
-"deer": "photo-209099203_457288733"
+"frog": "photo-211465984_457239049",
+"fox": "photo-211465984_457239048",
+"chick": "photo-211465984_457239047",
+"tiger": "photo-211465984_457239046",
+"cow": "photo-211465984_457239045",
+"pig": "photo-211465984_457239044"
 }
 
 return msg.send
