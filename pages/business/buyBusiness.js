@@ -25,7 +25,7 @@ module.exports = buyBusiness = async (msg) => {
             peer_id: peerId,
             event_data: JSON.stringify({
                 'type': 'show_snackbar',
-                'text': `❗ Вы не смогли купить точку`
+                'text': `❗ Вы не смогли купить огород`
             })
         })
     }
@@ -36,7 +36,7 @@ module.exports = buyBusiness = async (msg) => {
         peer_id: peerId,
         event_data: JSON.stringify({
             'type': 'show_snackbar',
-            'text': `✅ Вы успешно купили точку`
+            'text': `✅ Вы успешно купили огород`
         })
     })
 
