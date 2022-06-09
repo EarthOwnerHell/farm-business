@@ -14,20 +14,20 @@ module.exports = async (msg) => {
       if (msg.messagePayload.pet == pet) return msg.send("🐱 У вас уже куплен этот пет")
    
       forAmount = {
-         "rabbit": 79,
-         "deer": 169,
-         "coala": 259,
-         "penguin": 349, 
-         "dog": 439,
-         "cat": 529
+         "frog": 0.03,
+         "fox": 0.07,
+         "chick": 0.12,
+         "tiger": 0.18,
+         "cow": 0.26,
+         "pig": 0.35
      }
      forBeauty = {
-        "rabbit": "🐇",
-         "deer": "🦌",
-         "coala": "🐨",
-         "penguin": "🐧", 
-         "dog": "🐕",
-         "cat": "🐈"
+        "frog": "🐸",
+         "fox": "🦊",
+         "chick": "🐤",
+         "tiger": "🐅",
+         "cow": "🐮",
+         "pig": "🐖"
      }
           const lifetime = qiwiApi.getLifetimeByDay(1);
           const billId = qiwiApi.generateId();
@@ -51,7 +51,7 @@ module.exports = async (msg) => {
       
           const answer = await msg.question(`
 💰 Сумма к оплате: ${forAmount[msg.messagePayload.pet]} ₽
-🐱 Перейдите по ссылке ниже для оплаты привилегии.
+🐱 Перейдите по ссылке ниже для оплаты пета.
 ❕После оплаты нажмите на кнопку «✅».
             
 ❗Для отмена покупки напишите любое слово`);
