@@ -59,7 +59,7 @@ const urlButton = (label, url) => (
 
     const privilegesKeyboard = Keyboard.keyboard([
         [
-            (textButton('👑 Статусы', "statuses", Keyboard.PRIMARY_COLOR,))
+            (textButton('👑 Улучшения', "statuses", Keyboard.PRIMARY_COLOR,))
         ],
         [
             (textButton('😺 Петы', "pets", Keyboard.POSITIVE_COLOR,))
