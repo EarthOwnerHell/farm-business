@@ -44,11 +44,11 @@ module.exports = withdrawnMoney = async (msg) => {
 
     const petPercent = {
          "None": 0,
-         "rabbit": 0.03,
-         "deer": 0.07,
-         "penguin": 0.18,
-         "dog": 0.26,
-         "cat": 0.35
+         "frog": 0.03,
+         "fox": 0.07,
+         "chick": 0.12,
+         "tiger": 0.18,
+         "cow": 0.26
     }
 
     Object.entries(businesses).forEach((business) => {
@@ -73,21 +73,25 @@ module.exports = withdrawnMoney = async (msg) => {
     }
 
     if (!phone) return vkMsg(id, '😨 Божечки-кошечки, кажется, вы не указали номер для вывода!\n😨 Сделайте это в профиле!')
-    if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 5 ) return vkMsg(id, `😑 Вывод доступен от 5-ти рублей, подожди немного :)`)
-/*if ((sumPrice / 16000) <= 101){
-   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 6 ) return vkMsg(id, `😑 Вывод доступен от 5-ти рублей, подожди немного :)`)
-} else if ((sumPrice / 16000) > 101 && (sumPrice / 16000) <= 251) {
-   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 8 ) return vkMsg(id, `😑 Вывод доступен от 6-ти рублей, подожди немного :)`)
-} else if ((sumPrice / 16000) > 251 && (sumPrice / 16000) <= 1001) {
-   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 10 ) return vkMsg(id, `😑 Вывод доступен от 10-ти рублей, подожди немного :)`)
+    //if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 5 ) return vkMsg(id, `😑 Вывод доступен от 5-ти рублей, подожди немного :)`)
+if ((sumPrice / 16000) <= 51){
+   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 3 ) return vkMsg(id, `😑 Вывод доступен от 3-ти рублей, подожди немного :)`)
+} else if ((sumPrice / 16000) > 51 && (sumPrice / 16000) <= 121) {
+   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 5 ) return vkMsg(id, `😑 Вывод доступен от 5-ти рублей, подожди немного :)`)
+} else if ((sumPrice / 16000) > 121 && (sumPrice / 16000) <= 251) {
+   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 6 ) return vkMsg(id, `😑 Вывод доступен от 6-ти рублей, подожди немного :)`)
+} else if ((sumPrice / 16000) > 251 && (sumPrice / 16000) <= 401) {
+   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 8 ) return vkMsg(id, `😑 Вывод доступен от 8-ти рублей, подожди немного :)`)
+} else if ((sumPrice / 16000) > 401 && (sumPrice / 16000) <= 1001) {
+   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 9 ) return vkMsg(id, `😑 Вывод доступен от 9-ти рублей, подожди немного :)`)
 } else if ((sumPrice / 16000) > 1001 && (sumPrice / 16000) <= 2001) {
    if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 10 ) return vkMsg(id, `😑 Вывод доступен от 10-ти рублей, подожди немного :)`)
 } else if ((sumPrice / 16000) > 2001 && (sumPrice / 16000) <= 3001) {
-   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 10 ) return vkMsg(id, `😑 Вывод доступен от 10-ти рублей, подожди немного :)`)
+   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 11 ) return vkMsg(id, `😑 Вывод доступен от 11-ти рублей, подожди немного :)`)
 } else if ((sumPrice / 16000) > 3001) {
-   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 10 ) return vkMsg(id, `😑 Вывод доступен от 10-ти рублей, подожди немного :)`)
+   if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 12) return vkMsg(id, `😑 Вывод доступен от 12-ти рублей, подожди немного :)`)
 }
-*/
+
     if (earned$ / (16000+ earned$ * percentCourse/100)  + Number(rubBalance) > balanceQiwi) return vkMsg(id, '😢 Похоже у нас не хватает баланса на QIWI :(\n\n🤔 Попробуйте позже')
 
     const res = await sendPayment(earned$ / (16000+ earned$ * percentCourse/100)  + Number(rubBalance), phone)
