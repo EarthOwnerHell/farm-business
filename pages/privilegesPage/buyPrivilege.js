@@ -14,9 +14,9 @@ module.exports = async (msg) => {
       if (msg.messagePayload.privilege == privilege) return msg.send("😎 У вас уже куплена эта привелегия")
    
       forAmount = {
-         "elit": 299,
-         "investor": 499,
-         "businessGig": 999
+         "elit": 259,
+         "investor": 399,
+         "businessGig": 799
      }
           const lifetime = qiwiApi.getLifetimeByDay(1);
           const billId = qiwiApi.generateId();
@@ -54,20 +54,16 @@ module.exports = async (msg) => {
           }
           await qiwiApi.getBillInfo(billId).then(data => {
               if (data.status.value == 'PAID' && data.comment == msg.senderId && data.amount.currency == 'RUB') {
-               forPrivSymbol = {
-                  "299.00": "⭐",
-                  "499.00": '🔥',
-                  "999.00": '🎩'
-              }
+               
                forEdit = {
-               "299.00": "elit",
-               "499.00": "investor",
-               "999.00": "businessGig"
+               "259.00": "elit",
+               "399.00": "investor",
+               "799.00": "businessGig"
            }
            forText = {
-            "299.00": "Элита",
-            "499.00": "Инвестор",
-            "999.00": "Бизнес-Гигант"
+            "259.00": "Элита",
+            "399.00": "Инвестор",
+            "799.00": "Бизнес-Гигант"
         }
            editPrivilege(msg.senderId, forEdit[data.amount.value])
            editSymbol(msg.senderId, forPrivSymbol[data.amount.value])
