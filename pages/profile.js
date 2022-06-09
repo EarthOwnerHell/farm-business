@@ -36,7 +36,8 @@ module.exports = getProfile = async (msg) => {
          "fox": 0.07,
          "chick": 0.12,
          "tiger": 0.18,
-         "cow": 0.26
+         "cow": 0.26,
+         "pig": 0.35
     }
 
     forText = {
