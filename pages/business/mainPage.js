@@ -2,20 +2,11 @@ module.exports = businessPage = async (msg) => {
 
     const { id, businesses: { market, hospital, motel, theatre, hotel, airoport }, privilege } = msg.user
 
-    const addElement = (title, count, forBuy, profit, photo_id, firstPayload, secondPayload) => ({
+    const addElement = (title, count, forBuy, profit, photo_id, secondPayload) => ({
         title: `${title} (x${count})`,
         description: `💳 Цена: ${forBuy} $\n⌛ Прибыль: ${profit} $ в сутки`,
         photo_id: `-${photo_id}`,
         "buttons": [
-            {
-                "action": {
-                    "type": "callback",
-                    "label": "💬 Подробная информация",
-                    "payload": {
-                        infoUpgrade: `${firstPayload}`
-                    },
-                },
-            },
             {
                 "action": {
                     "type": "callback",
@@ -32,62 +23,56 @@ module.exports = businessPage = async (msg) => {
         type: 'carousel',
         elements: [
             addElement(
-                '🏪 Магазин',
+                '🥕 Морковь',
                 `${market}`,
                 `55792`,
                 '1200',
-                '209099203_457272389',
-                'getFirstInfo',
+                '211465984_457239027',
                 'market'
             ),
 
             addElement(
-                '🏥 Госпиталь',
+                '🌾 Пшеница',
                 `${hospital}`,
                 `114983`,
                 '2820',
-                '209099203_457272388',
-                'getSecondInfo',
+                '211465984_457239028',
                 'hospital'
             ),
 
             addElement(
-                '🏘 Мотель',
+                '🎃 Тыква',
                 `${motel}`,
                 `235829`,
                 '6600',
-                '209099203_457272387',
-                'getThirdInfo',
+                '211465984_457239029',
                 'motel'
             ),
 
             addElement(
-                '🏛 Театр',
+                '🥦 Броколли',
                 `${theatre}`,
                 `419276`,
                 '13300',
-                '209099203_457272386',
-                'getFourthInfo',
+                '211465984_457239030',
                 'theatre'
             ),
 
             addElement(
-                '🏬 Отель',
+                '🍅 Томаты',
                 `${hotel}`,
                 `741983`,
                 '26400',
-                '209099203_457272385',
-                'getFivthInfo',
+                '211465984_457239031',
                 'hotel'
             ),
 
             addElement(
-                '✈ Аэропорт',
+                '🌽 Кукуруза',
                 `${airoport}`,
                 "1017269",
                 '41400',
-                '209099203_457272384',
-                'getSixthInfo',
+                '211465984_457239032',
                 'airoport'
             ),
         ],
@@ -97,62 +82,56 @@ module.exports = businessPage = async (msg) => {
         type: 'carousel',
         elements: [
             addElement(
-                '🏪 Магазин',
+                '🥕 Морковь',
                 `${market}`,
-                "50212",
+                `50212`,
                 '1200',
-                '209099203_457272389',
-                'getFirstInfo',
+                '211465984_457239027',
                 'market'
             ),
 
             addElement(
-                '🏥 Госпиталь',
+                '🌾 Пшеница',
                 `${hospital}`,
-                "103484",
+                `103484`,
                 '2820',
-                '209099203_457272388',
-                'getSecondInfo',
+                '211465984_457239028',
                 'hospital'
             ),
 
             addElement(
-                '🏘 Мотель',
+                '🎃 Тыква',
                 `${motel}`,
-                "212246",
+                `212246`,
                 '6600',
-                '209099203_457272387',
-                'getThirdInfo',
+                '211465984_457239029',
                 'motel'
             ),
 
             addElement(
-                '🏛 Театр',
+                '🥦 Броколли',
                 `${theatre}`,
-                "377348",
+                `377348`,
                 '13300',
-                '209099203_457272386',
-                'getFourthInfo',
+                '211465984_457239030',
                 'theatre'
             ),
 
             addElement(
-                '🏬 Отель',
+                '🍅 Томаты',
                 `${hotel}`,
-                '667784',
+                `667784`,
                 '26400',
-                '209099203_457272385',
-                'getFivthInfo',
+                '211465984_457239031',
                 'hotel'
             ),
 
             addElement(
-                '✈ Аэропорт',
+                '🌽 Кукуруза',
                 `${airoport}`,
                 "915542",
                 '41400',
-                '209099203_457272384',
-                'getSixthInfo',
+                '211465984_457239032',
                 'airoport'
             ),
         ],
