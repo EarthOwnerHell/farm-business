@@ -32,11 +32,11 @@ module.exports = getProfile = async (msg) => {
   
     const petPercent = {
          "None": 0,
-         "rabbit": 0.03,
-         "deer": 0.07,
-         "penguin": 0.18,
-         "dog": 0.26,
-         "cat": 0.35
+         "frog": 0.03,
+         "fox": 0.07,
+         "chick": 0.12,
+         "tiger": 0.18,
+         "cow": 0.26
     }
 
     forText = {
