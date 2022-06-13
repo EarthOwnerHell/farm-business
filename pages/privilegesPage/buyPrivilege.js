@@ -61,9 +61,9 @@ module.exports = async (msg) => {
                "799.00": "businessGig"
            }
            forText = {
-            "259.00": "Элита",
-            "399.00": "Инвестор",
-            "799.00": "Бизнес-Гигант"
+            "259.00": "Секрет кукурузы",
+            "399.00": "Легендарные удобрения",
+            "799.00": "Трактор <<Джо>>"
         }
            editPrivilege(msg.senderId, forEdit[data.amount.value])
            editSymbol(msg.senderId, forPrivSymbol[data.amount.value])
