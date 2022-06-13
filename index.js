@@ -240,12 +240,6 @@ try {
                 keyboard: mainBoard(false),
             });
 
-            msg.send({
-                message: 'Обучение',
-                template: howToPlay,
-                random_id: getRandomId(),
-            });
-
             const name = await getVkNameById(msg.senderId);
 
             const newUser = await createUser({
