@@ -133,13 +133,13 @@ const topBoard = Keyboard.keyboard([
 
 const privilegesBuyButtons = Keyboard.keyboard([
     [
-     (buyPrivilege('⭐ Элита', "elit", Keyboard.POSITIVE_COLOR)),
+     (buyPrivilege('🌽 Секрет кукурузы', "elit", Keyboard.POSITIVE_COLOR)),
     ],
     [
-     (buyPrivilege('🔥 Инвестор', "investor", Keyboard.NEGATIVE_COLOR)),
+     (buyPrivilege('🍀 Легендарные удобрения', "investor", Keyboard.NEGATIVE_COLOR)),
     ],
     [
-     (buyPrivilege('🎩 Бизнес-гигант', "businessGig", Keyboard.PRIMARY_COLOR)),
+     (buyPrivilege('🚜 Трактор "Джо"', "businessGig", Keyboard.PRIMARY_COLOR)),
     ]
     ]).inline()
 
