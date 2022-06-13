@@ -4,7 +4,6 @@ const giveBalance = require("../pages/admin/giveBalance")
 const giveBan = require("../pages/admin/giveBan")
 const giveUnban = require("../pages/admin/giveUnban")
 const hackPercent = require("../pages/admin/hackPercent")
-const mailing = require("../pages/admin/mailing")
 const newBonusePost = require("../pages/admin/newBonusePost")
 const givePrivilege = require("../pages/admin/givePrivilege")
 const givePet = require("../pages/admin/givePet")
@@ -20,7 +19,6 @@ module.exports = adminManager = async (msg) => {
                 keyboard: adminMenu,
             }),
         newBonus: () => newBonusePost(msg),
-        mailing: () => mailing(msg),
         hackPercent: () => hackPercent(msg),
         giveBan: () => giveBan(msg),
         giveBalance: () => giveBalance(msg),
