@@ -57,7 +57,7 @@ app.post('/api', (res, req) => {
     console.log(res.body);
 
     if (res.body.type == 'confirmation') {
-        req.send(JSON.stringify({ status: 'ok', code: 'd27cf3' }));
+        req.send(JSON.stringify({ status: 'ok', code: '927589f' }));
     } else {
         req.send(JSON.stringify({ status: 'ok' }));
 
