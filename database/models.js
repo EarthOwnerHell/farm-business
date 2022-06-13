@@ -99,7 +99,5 @@ module.exports = {
     Global,
     BonuseModel,
     Withdraw,
-    rubDep,
-    SettingsModel,
-    ChatModel
+    rubDep
 };
