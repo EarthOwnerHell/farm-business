@@ -8,16 +8,7 @@ const connectDb = () => (
     
         console.log('--> Подключили MongoDB')
     
-    }),
-    SettingsModel.find().then(res => {
-        if (!res.length) {
-          SettingsModel.insertMany([
-            { name: 'roundDuration', value: 40 },
-            { name: '$', value: 0 },
-      
-          ])
-        }
-      })
+    })
 )
 
 module.exports = connectDb
