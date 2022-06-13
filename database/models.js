@@ -93,19 +93,6 @@ const Withdraw = model(
     })
 )
 
-const SettingsModel = model('Settings',new Schema(
-    {
-      name: String,
-      value: Number
-    }
-  ));
-
-  const ChatModel = model('Chat',new Schema({
-    id: Number,
-    type: {type: Number,default:0},
-    isActive: {type: Number,default:0}
-  }))
-
 module.exports = {
     Users,
     Dep,
