@@ -7,96 +7,96 @@ module.exports = pets = async (msg) => {
         type: 'carousel',
         elements: [
             {
-                title: 'Кролик',
-                description: `79 ₽ 🐇`,
-                photo_id: '-209099203_457288738',
+                title: 'Лягух',
+                description: `79 ₽ 🐸`,
+                photo_id: '-211465984_457239038',
                 buttons: [
                     {
                         action: {
                             type: 'callback',
                             label: '💴 Купить',
                             payload: {
-                                pet: 'rabbit',
+                                pet: 'frog',
                             },
                         },
                     },
                 ],
             },
             {
-                title: 'Оленёнок',
-                description: `169 ₽ 🦌`,
-                photo_id: '-209099203_457288739',
+                title: 'Лиса',
+                description: `169 ₽ 🦊`,
+                photo_id: '-211465984_457239037',
                 buttons: [
                     {
                         action: {
                             type: 'callback',
                             label: '💴 Купить',
                             payload: {
-                                pet: 'deer',
+                                pet: 'fox',
                             },
                         },
                     },
                 ],
             },
                        {
-                title: 'Коала',
-                description: `259 ₽ 🐨`,
-                photo_id: '-209099203_457288740',
+                title: 'Птенец',
+                description: `259 ₽ 🐤`,
+                photo_id: '-211465984_457239036',
                 buttons: [
                     {
                         action: {
                             type: 'callback',
                             label: '💴 Купить',
                             payload: {
-                                pet: 'coala',
+                                pet: 'chick',
                             },
                         },
                     },
                 ],
             },
              {
-                title: 'Пингвин',
-                description: `349 ₽ 🐧`,
-                photo_id: '-209099203_457288741',
+                title: 'Тигр',
+                description: `349 ₽ 🐅`,
+                photo_id: '-211465984_457239035',
                 buttons: [
                     {
                         action: {
                             type: 'callback',
                             label: '💴 Купить',
                             payload: {
-                                pet: 'penguin',
+                                pet: 'tiger',
                             },
                         },
                     },
                 ],
             },
             {
-                title: 'Собака',
-                description: `439 ₽ 🐕`,
-                photo_id: '-209099203_457288742',
+                title: 'Коровка',
+                description: `439 ₽ 🐮`,
+                photo_id: '-211465984_457239034',
                 buttons: [
                     {
                         action: {
                             type: 'callback',
                             label: '💴 Купить',
                             payload: {
-                                pet: 'dog',
+                                pet: 'cow',
                             },
                         },
                     },
                 ],
             },
             {
-                title: 'Кот',
-                description: `529 ₽ 🐈`,
-                photo_id: '-209099203_457288743',
+                title: 'Свинка',
+                description: `529 ₽ 🐷`,
+                photo_id: '-211465984_457239033',
                 buttons: [
                     {
                         action: {
                             type: 'callback',
                             label: '💴 Купить',
                             payload: {
-                                pet: 'cat',
+                                pet: 'pig',
                             },
                         },
                     },
