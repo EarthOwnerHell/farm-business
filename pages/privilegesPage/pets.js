@@ -25,7 +25,7 @@ module.exports = pets = async (msg) => {
             {
                 title: 'Лиса',
                 description: `169 ₽ 🦊`,
-                photo_id: '-211465984_457239037',
+                photo_id: '-211465984_457239039',
                 buttons: [
                     {
                         action: {
@@ -41,7 +41,7 @@ module.exports = pets = async (msg) => {
                        {
                 title: 'Птенец',
                 description: `259 ₽ 🐤`,
-                photo_id: '-211465984_457239036',
+                photo_id: '-211465984_457239040',
                 buttons: [
                     {
                         action: {
@@ -57,7 +57,7 @@ module.exports = pets = async (msg) => {
              {
                 title: 'Тигр',
                 description: `349 ₽ 🐅`,
-                photo_id: '-211465984_457239035',
+                photo_id: '-211465984_457239041',
                 buttons: [
                     {
                         action: {
@@ -73,7 +73,7 @@ module.exports = pets = async (msg) => {
             {
                 title: 'Коровка',
                 description: `439 ₽ 🐮`,
-                photo_id: '-211465984_457239034',
+                photo_id: '-211465984_457239042',
                 buttons: [
                     {
                         action: {
@@ -89,7 +89,7 @@ module.exports = pets = async (msg) => {
             {
                 title: 'Свинка',
                 description: `529 ₽ 🐷`,
-                photo_id: '-211465984_457239033',
+                photo_id: '-211465984_457239043',
                 buttons: [
                     {
                         action: {
