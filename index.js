@@ -8,7 +8,6 @@ const buyBusiness = require('./pages/business/buyBusiness');
 const getInfo = require('./pages/business/info');
 const buyPrivilege = require('./pages/privilegesPage/buyPrivilege')
 const { token, groupId } = require('./settings/config.json')
-const chatManager = require("./managers/chatManager")
 const buyPetAccept = require('./pages/privilegesPage/buyPetAccept')
 const buyPet = require('./pages/privilegesPage/buyPet')
 
@@ -26,7 +25,7 @@ const botVk = new VK({
     pollingGroupId: groupId
   })
 
-const { Users, ChatModel } = require('./database/models')
+const { Users } = require('./database/models')
 
 const { vk, getVkNameById, vkMsg } = require('./settings/vk');
 const { mainBoard } = require('./keyboards/usual');
@@ -76,44 +75,6 @@ app.listen(5000, () => console.log('--> Сервер включен...'));
 connectDb();
 
 autoCreateGlobal();
-
-vk.updates.on(['chat_invite_user'], async (context) => {
-    console.log(context);
-    if (context.eventMemberId == -groupId) {
-      let isChat = await ChatModel.findOne({
-        id: context.peerId,
-      })
-      if (!isChat) {
-        new ChatModel({
-          id: context.peerId
-  
-        }).save()
-      }
-      context.send(`Привет!
-        Ты можешь активировать бесплатную беседу, либо купить VIP - 50 р.
-        Преимущество VIP: 2% со всех ставок идёт на твой баланс.\n\nВЫДАЙТЕ МНЕ АДМИНКУ ДЛЯ КОРРЕКТНОЙ РАБОТЫ`, {
-        keyboard: Keyboard.keyboard([
-          [Keyboard.textButton({
-            label: 'Бесплатная беседа',
-            payload: {
-              command: 'activeFree'
-            },
-          })],
-          [Keyboard.textButton({
-            label: 'VIP Беседа',
-            payload: {
-              command: 'activePay'
-            },
-          })]
-        ])
-      })
-      console.log('new chat');
-      return
-    }
-  
-  
-  
-  })
 
 vk.updates.on('like_add', async (msg) => {
     if (msg.objectType == 'photo') return;
@@ -185,47 +146,8 @@ vk.updates.on('group_leave', async (msg) => {
     minusBusinessUser(msg.userId);
 });
 
-vk.updates.on(['chat_invite_user'], async (context, next) => {
-    console.log(context);
-    if (context.eventMemberId == -groupId) {
-      let isChat = await ChatModel.findOne({
-        id: context.peerId,
-      })
-      if (!isChat) {
-        new ChatModel({
-          id: context.peerId
-  
-        }).save()
-      }
-      context.send(`Привет!
-        Ты можешь активировать бесплатную беседу, либо купить VIP - 50 р.
-        Преимущество VIP: 2% со всех ставок идёт на твой баланс.\n\nВЫДАЙТЕ МНЕ АДМИНКУ ДЛЯ КОРРЕКТНОЙ РАБОТЫ`, {
-        keyboard: Keyboard.keyboard([
-          [Keyboard.textButton({
-            label: 'Бесплатная беседа',
-            payload: {
-              command: 'activeFree'
-            },
-          })],
-          [Keyboard.textButton({
-            label: 'VIP Беседа',
-            payload: {
-              command: 'activePay'
-            },
-          })]
-        ])
-      })
-      console.log('new chat');
-      return
-    }
-  
-  
-  
-  })
-
 try {
     vk.updates.on('message_new', async (msg) => {
-        if (msg.isChat) return chatManager(msg);
 
         const reg = await userReg(msg.senderId);
 
