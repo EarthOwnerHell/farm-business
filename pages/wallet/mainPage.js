@@ -60,7 +60,7 @@ module.exports = mainPageWallet = async (msg) => {
                 description: `💵 Баланс: ${numberWithSpace(
                     earned$
                 )} $\n\n📊 ${numberWithSpace(buyCourse)} $ = 1₽`,
-                photo_id: '-209099203_457272395',
+                photo_id: '-211465984_457239087',
                 buttons: [
                     {
                         action: {
@@ -78,7 +78,7 @@ module.exports = mainPageWallet = async (msg) => {
                     earned$ / (16000+ (earned$ * percentCourse) / 100) 
                         +Number(rubBalance)
                 )}₽`,
-                photo_id: '-209099203_457272394',
+                photo_id: '-211465984_457239088',
                 buttons: [
                     {
                         action: {
@@ -86,90 +86,6 @@ module.exports = mainPageWallet = async (msg) => {
                             label: '⬇ Вывести',
                             payload: {
                                 command: 'withdrawn',
-                            },
-                        },
-                    },
-                ],
-            },
-                       {
-                title: '⬇ Вывод на ЮMONEY',
-                description: `💵 Баланс: ${numberWithSpace(
-                    earned$
-                )} $\n\n⌛ На вывод: ${numberWithSpace(
-                    earned$ / (16000+ (earned$ * percentCourse) / 100) 
-                        +Number(rubBalance)
-                )}₽`,
-                photo_id: '-209099203_457272393',
-                buttons: [
-                    {
-                        action: {
-                            type: 'callback',
-                            label: '⬇ Вывести',
-                            payload: {
-                                command: 'no',
-                            },
-                        },
-                    },
-                ],
-            },
-             {
-                title: '⬇ Вывод VKCOIN',
-                description: `💵 Баланс: ${numberWithSpace(
-                    earned$
-                )} $\n\n⌛ На вывод: ${numberWithSpace(
-                    earned$ / (16000+ (earned$ * percentCourse) / 100) 
-                        +Number(rubBalance)
-                )}₽`,
-                photo_id: '-209099203_457272392',
-                buttons: [
-                    {
-                        action: {
-                            type: 'callback',
-                            label: '⬇ Вывести',
-                            payload: {
-                                command: 'no',
-                            },
-                        },
-                    },
-                ],
-            },
-            {
-                title: '⬇ Вывод на карту',
-                description: `💵 Баланс: ${numberWithSpace(
-                    earned$
-                )} $\n\n⌛ На вывод: ${numberWithSpace(
-                    earned$ / (16000+ (earned$ * percentCourse) / 100) 
-                        +Number(rubBalance)
-                )}₽`,
-                photo_id: '-209099203_457272391',
-                buttons: [
-                    {
-                        action: {
-                            type: 'callback',
-                            label: '⬇ Вывести',
-                            payload: {
-                                command: 'no',
-                            },
-                        },
-                    },
-                ],
-            },
-            {
-                title: '⬇ Вывод на номер',
-                description: `💵 Баланс: ${numberWithSpace(
-                    earned$
-                )} $\n\n⌛ На вывод: ${numberWithSpace(
-                    earned$ / (16000+ (earned$ * percentCourse) / 100) 
-                        +Number(rubBalance)
-                )}₽`,
-                photo_id: '-209099203_457272390',
-                buttons: [
-                    {
-                        action: {
-                            type: 'callback',
-                            label: '⬇ Вывести',
-                            payload: {
-                                command: 'no',
                             },
                         },
                     },
