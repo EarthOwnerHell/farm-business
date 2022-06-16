@@ -7,7 +7,7 @@ module.exports = mainPageRefs = async (msg) =>  {
     const { forRef } = await getGlobal()
     const { id, ref: { value } } = msg.user
 
-    vk.api.call("utils.getShortLink", { url: `vk.me/angbirdsre?ref=${id}` }).then(function (res) {
+    vk.api.call("utils.getShortLink", { url: `vk.me/bizfarm?ref=${id}` }).then(function (res) {
         vkMsgKeyboard(id,`🎁 Реферальная программа\n\n🎯 Приглашайте друзей, мы платим за каждого реферала:\n\n🤑 ${numberWithSpace(forRef)} $ (${(forRef / 16000).toFixed(2)} ₽) на баланс\n🔥 Процент от пополнений реферала, сразу на вывод!\n\n⚡Ваш процент: ${value < 10 ? '3% ( 1 уровень )' 
         : value < 20 ? '4% ( 2 уровень )' 
         : value < 30 ? '5% (3 уровень)' 
