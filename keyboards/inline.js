@@ -160,7 +160,7 @@ const backToProfile = Keyboard.keyboard([
 
 const depInlineBoard = Keyboard.keyboard([
     [
-        urlButton('🔗 Быстрое пополнение', `https://vk.com/app6887721_-209099203#donate_10`)
+        urlButton('🔗 Быстрое пополнение', `https://vk.com/app6887721_-211465984#donate_10`)
     ]
 ]).inline()
 
