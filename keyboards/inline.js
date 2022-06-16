@@ -93,7 +93,7 @@ const acceptWithdrawn = Keyboard.keyboard([
 
 const forUnban = Keyboard.keyboard([
     [
-        urlButton('Разбан', 'https://vk.com/topic-209099203_48256717')
+        urlButton('Разбан', 'https://vk.com/binpay')
     ]
 ]).inline()
 
@@ -172,23 +172,9 @@ const topInvested = Keyboard.keyboard([
 
 const reviewMenu = Keyboard.keyboard([
     [
-        urlButton('✏ Оставить отзыв', 'https://vk.com/topic-209099203_48838015')
+        urlButton('✏ Оставить отзыв', 'https://vk.com/topic-211465984_48691061')
     ]
 ]).inline()
-
-const mailingMenu = Keyboard.keyboard([
-    [
-        urlButton('📝 Отзывы', 'https://vk.com/topic-209099203_48838015'),
-        urlButton('📖 Обучение', 'https://m.vk.com/@badmoneybirds-zarabotok'),
-    ],
-    [
-        urlButton(
-            '💳 Быстрое пополнение',
-            'https://m.vk.com/app6887721_-209099203#donate_10'
-        ),
-    ],
-    [urlButton('💬 Беседа', 'https://vk.me/join/AJQ1d_TAWiFqQesViof56Yel')],
-]).inline();
 
 module.exports = {
     lvlOfRefBoard,
