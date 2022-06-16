@@ -66,7 +66,7 @@ module.exports = mainPageWallet = async (msg) => {
                         action: {
                             type: 'open_link',
                             label: '⬆ Пополнить',
-                            link: `https://vk.com/app6887721_-209099203#donate_10&op=1000`,
+                            link: `https://vk.com/app6887721_-211465984#donate_10&op=1000`,
                         },
                     },
                 ],
