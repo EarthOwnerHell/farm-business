@@ -8,7 +8,7 @@ const userUrl = await msg.question('Вставьте ссылку на проф�
 
     if (!userId.id || userId.type !== 'user') return msg.send('Ошибка, проверь вводимые данные');
    
-    const setPet = await msg.question('Введите пета (coala, deer, penguin, cat, dog, rabbit):')
+    const setPet = await msg.question('Введите пета (frog, fox, chick, tiger, cow, pig):')
     
     const checkPet = String(setPet.text)
     msg.send(`Успешно выдали https://vk.com/id${userId.id} челу`)
