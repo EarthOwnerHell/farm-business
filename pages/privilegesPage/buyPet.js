@@ -8,7 +8,7 @@ const qiwiApi = new QiwiBillPaymentsAPI(SECRET_KEY);
 
 module.exports = async (msg) => {
    const { id, pet, name } = msg.user
-   if (["cat", "dog", "coala", "deer", "rabbit", "penguin"]
+   if (["frog", "fox", "chick", "tiger", "cow", "pig"]
       .includes(msg.messagePayload.pet)) {
     
       if (msg.messagePayload.pet == pet) return msg.send("🐱 У вас уже куплен этот пет")
