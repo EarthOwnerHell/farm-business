@@ -14,12 +14,12 @@ module.exports = async (msg) => {
       if (msg.messagePayload.pet == pet) return msg.send("🐱 У вас уже куплен этот пет")
    
       forAmount = {
-         "frog": 0.03,
-         "fox": 0.07,
-         "chick": 0.12,
-         "tiger": 0.18,
-         "cow": 0.26,
-         "pig": 0.35
+         "frog": 79,
+         "fox": 169,
+         "chick": 259,
+         "tiger": 349,
+         "cow": 439,
+         "pig": 529
      }
      forBeauty = {
         "frog": "🐸",
