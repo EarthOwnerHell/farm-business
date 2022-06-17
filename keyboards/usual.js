@@ -39,17 +39,17 @@ const adminButton = (label, admin = label, color = Keyboard.SECONDARY_COLOR) => 
 const mainBoard = (admin) => (
     Keyboard.keyboard([
         [
-            textButton('🐣 Профиль', 'profile', green)  
+            textButton('🖥 Личный кабинет', 'profile', green)  
         ],
         [
-            textButton('💵 Инвестировать', 'business', red),
-            (textButton('😎 Привилегии', "privileges", Keyboard.POSITIVE_COLOR))
+            textButton('🌾 Ферма', 'business', red),
+            (textButton('👑 Привилегии', "privileges", Keyboard.POSITIVE_COLOR))
         ],
         [
-            callBack('🎁 Рефералы', 'refs', blue), textButton('💳 Кошелек', 'wallet', blue),
+            callBack('🎁 Приглашения', 'refs', blue), textButton('💵 Деньги', 'wallet', blue),
         ],
         [
-            textButton('📊 Статистика', 'info', green)
+            textButton('⚡️Информация о боте', 'info', green)
         ],
         admin ? [
             adminButton('Админка', 'admin', red)
