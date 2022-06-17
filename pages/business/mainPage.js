@@ -10,7 +10,7 @@ module.exports = businessPage = async (msg) => {
             {
                 "action": {
                     "type": "callback",
-                    "label": "💰 Приобрести точку",
+                    "label": "💰 Приобрести огород",
                     "payload": {
                         buyUpgrade: `${secondPayload}`
                     },
