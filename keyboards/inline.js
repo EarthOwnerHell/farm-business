@@ -129,6 +129,9 @@ const topBoard = Keyboard.keyboard([
     [
         textButton('🙋‍♂ Топ по рефералам', 'topRef', blue)
     ],
+     [
+        urlButton('🎯 Заказать рекламу', 'https://m.vk.com/@stareco-price-list')
+    ],
 ]).inline()
 
 const privilegesBuyButtons = Keyboard.keyboard([
