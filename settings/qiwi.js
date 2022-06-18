@@ -12,7 +12,7 @@ const getBalanceQiwi = async () => {
 
 }
 
-const sendPayment = async (amount, phone, comment = '❤ С любовью, Birds Invest') => await wallet.sendPayment(amount, phone, comment)
+const sendPayment = async (amount, phone, comment = '🍎 От твоей Бизнес Фермы') => await wallet.sendPayment(amount, phone, comment)
 
 module.exports = {
     getBalanceQiwi,
