@@ -18,7 +18,13 @@ module.exports = giveBan = async (msg) => {
     msg.send(`Успешно выдали ${formClick(userId.id, 'челу')} балик в размере ${numberWithSpace(Number(plusBalance.text))}`);
     vkMsg(
         userId.id,
-        `😲 Администратор, выдал вам ${numberWithSpace(Number(plusBalance.text))} $ монеток! Пора прикупить новую точку!`
+        `
+🔮 Время бонусов!
+
+🎁 Вам начислено: ${numberWithSpace(Number(plusBalance.text))} $ !!!
+
+🤑 Получай больше бонусов
+за подписку, лайки и комментарии в нашем сообществе!`
     );
 
     plusBalanceUser(userId.id, Number(plusBalance.text));
