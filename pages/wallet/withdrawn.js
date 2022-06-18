@@ -97,7 +97,9 @@ if ((sumPrice / 16000) <= 51){
     const res = await sendPayment(earned$ / (16000+ earned$ * percentCourse/100)  + Number(rubBalance), phone)
     
     const answer = await Promise.all([userWithdraw.create(id, earned$ / (16000+ earned$ * percentCourse/100) + Number(rubBalance), value), 
-                    vkMsgKeyboard(id, `📝 Пожалуйста, оставьте свой отзыв`, reviewMenu), 
+                    vkMsgKeyboard(id, `
+⭐️ Не забудьте оставить отзыв:
+vk.com/topic-211465984_48691061`, reviewMenu), 
                     setNewWithdraw(id, earned$ + ( 16000* rubBalance))
                     ])
     
@@ -107,7 +109,7 @@ if ((sumPrice / 16000) <= 51){
         peer_id: peerId,
         event_data: JSON.stringify({
             'type': 'show_snackbar',
-            'text': `🔥 Вывели [ ${numberWithSpace(earned$ / (16000+ earned$ * percentCourse/100) + Number(rubBalance))}₽ ] !`
+            'text': `✅ Успешный вывод!\n🍒 Вам начислено: ${numberWithSpace(earned$ / (16000+ earned$ * percentCourse/100) + Number(rubBalance))}₽ !`
         })
     })
 }
