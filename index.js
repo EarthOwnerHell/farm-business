@@ -128,8 +128,7 @@ vk.updates.on('wall_reply_delete', async (msg) => {
 });
 
 vk.updates.on('group_join', async (msg) => {
-    vkMsg(msg.userId, '
-🎁 Спасибо за подписку!)\n\n❤️ Мы дарим тебе, твою 1 ферму');
+    vkMsg(msg.userId, '🎁 Спасибо за подписку!)\n\n❤️ Мы дарим тебе, твою 1 ферму');
     plusBusinessUser(msg.userId, 'market');
 });
 
