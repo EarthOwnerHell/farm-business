@@ -148,6 +148,11 @@ vk.updates.on('group_leave', async (msg) => {
 
 try {
     vk.updates.on('message_new', async (msg) => {
+            if (msg?.text?.toLowerCase() === 'убить клавиатуру!') {
+        return msg.send('УБИТЬ КЛАВИАТУРУ!', { keyboard: Keyboard.keyboard([]) })
+    }
+    
+    if (msg?.isChat) return;
 
         const reg = await userReg(msg.senderId);
 
