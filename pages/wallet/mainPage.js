@@ -73,10 +73,11 @@ module.exports = mainPageWallet = async (msg) => {
             },
             {
                 title: '⬇ Вывод на QIWI',
-                description: `❗️ Перед выводом не забудьте
-идентифицировать QIWI-кошелёк\n\n⌛ На вывод: ${numberWithSpace(
+                description: `‼ Идентифицируйте киви перед выводом\n\n⌛ На вывод: ${numberWithSpace(
+                    Math.round(
                     earned$ / (16000+ (earned$ * percentCourse) / 100) 
                         +Number(rubBalance)
+                        )
                 )}₽`,
                 photo_id: '-211465984_457239088',
                 buttons: [
