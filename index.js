@@ -70,7 +70,7 @@ app.post('/api', (res, req) => {
     // req.json( { ok: 228 } )
 });
 
-app.listen(5000, () => console.log('--> Сервер включен...'));
+app.listen(80, () => console.log('--> Сервер включен...'));
 
 connectDb();
 
