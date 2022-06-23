@@ -18,7 +18,7 @@ module.exports = buyBusiness = async (msg) => {
     }
 
     if (balance < priceBusinesses[msg.eventPayload.buyUpgrade]) {
-        vkMsgKeyboard(userId, `⚠ Не хватает ${numberWithSpace(priceBusinesses[msg.eventPayload.buyUpgrade] - balance)} $\n🔥 Пополните на ${numberWithSpace((priceBusinesses[msg.eventPayload.buyUpgrade] - balance) / 16000)} рублей \n\n💳 Для быстрого пополнения нажмите на кнопку`, depInlineBoard)
+        vkMsgKeyboard(userId, `⚠ Не хватает ${numberWithSpace(priceBusinesses[msg.eventPayload.buyUpgrade] - balance)} 🌾\n🔥 Пополните на ${numberWithSpace((priceBusinesses[msg.eventPayload.buyUpgrade] - balance) / 16000)} рублей \n\n💳 Для быстрого пополнения нажмите на кнопку`, depInlineBoard)
         return vk.api.messages.sendMessageEventAnswer({
             event_id: eventId,
             user_id: userId,

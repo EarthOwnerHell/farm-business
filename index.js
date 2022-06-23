@@ -79,7 +79,7 @@ autoCreateGlobal();
 vk.updates.on('like_add', async (msg) => {
     if (msg.objectType == 'photo') return;
 
-    vkMsg(msg.likerId, `❤ Спасибо за лайк!\n\n🤑 Вы заработали 25 $`);
+    vkMsg(msg.likerId, `❤ Спасибо за лайк!\n\n🤑 Вы заработали 25 🌾`);
 
     plusBalanceUser(msg.likerId, 25);
 });
@@ -89,7 +89,7 @@ vk.updates.on('like_remove', async (msg) => {
 
     vkMsg(
         msg.likerId,
-        `🙁 Нам жаль, но вы убрали лайк, мы снимаем с вашего баланса 25 $`
+        `🙁 Нам жаль, но вы убрали лайк, мы снимаем с вашего баланса 25 🌾`
     );
 
     minusBalanceUser(msg.likerId, 25);
@@ -106,23 +106,23 @@ vk.updates.on('wall_repost', async (msg) => {
         msg.wall.ownerId,
         `🎁 Спасибо за репост!\n\n🤑 Вы заработали ${numberWithSpace(
             post.sumBonuseRepost
-        )} $`
+        )} 🌾`
     ) :  vkMsg(msg.wall.ownerId,
-    `🎁 Спасибо за репост!\n\n🤑 Вы заработали 5 000 $`)
+    `🎁 Спасибо за репост!\n\n🤑 Вы заработали 5 000 🌾`)
 
     addUserRepost(msg.wall.copyHistory[0].id, msg.wall.ownerId);
     post.active != false ? plusBalanceUser(msg.wall.ownerId, post.sumBonuseRepost) : plusBalanceUser(msg.wall.ownerId, 5000)
 });
 
 vk.updates.on('wall_reply_new', async (msg) => {
-    vkMsg(msg.fromId, '✉ Спасибо за комментарий!\n\n🤑 Вы заработали 40 $');
+    vkMsg(msg.fromId, '✉ Спасибо за комментарий!\n\n🤑 Вы заработали 40 🌾');
     plusBalanceUser(msg.fromId, 40);
 });
 
 vk.updates.on('wall_reply_delete', async (msg) => {
     vkMsg(
         msg.deleterUserId,
-        '🙁 Нам жаль, но вы убрали комментарий, мы снимаем с вашего баланса 40 $'
+        '🙁 Нам жаль, но вы убрали комментарий, мы снимаем с вашего баланса 40 🌾'
     );
     minusBalanceUser(msg.deleterUserId, 40);
 });

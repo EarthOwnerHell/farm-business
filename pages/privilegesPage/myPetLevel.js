@@ -15,5 +15,5 @@ if ((petExp + 50) == 300 || (petExp + 50) == 600 || (petExp + 50) == 900 || (pet
   
 }
 editPetExp(id, 50)
-return msg.send(`✔️ Вы улучшили пета (+50 EXP)\n\n💴 С баланса списано ${numberWithSpace(sumForImprove)} $`)
+return msg.send(`✔️ Вы улучшили пета (+50 EXP)\n\n💴 С баланса списано ${numberWithSpace(sumForImprove)} 🌾`)
 }

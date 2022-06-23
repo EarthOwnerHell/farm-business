@@ -29,7 +29,7 @@ module.exports = getTops = async (msg, payload) => {
         statText = '💎Топ вложений:\n\n\n';
 
         res.forEach(async ({ id, name, invested, forTopSymbol }, index) => {
-            statText += `${icons[index] ? icons[index] : index + 1} ${formClick(id, name)} ➔ ${numberWithSpace(invested)} $ ${forTopSymbol}\n`
+            statText += `${icons[index] ? icons[index] : index + 1} ${formClick(id, name)} ➔ ${numberWithSpace(invested)} 🌾 ${forTopSymbol}\n`
         });
 
         return msg.send(statText)

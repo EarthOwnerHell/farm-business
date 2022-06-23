@@ -39,7 +39,7 @@ return msg.send
 🚀 Бонус: +${petPercent[pet] + (petLevel * 2)}% к доходу
 
 ✨ Цена следующего
-улучшения: ${numberWithSpace((petExp * 100) + 50000)} $
+улучшения: ${numberWithSpace((petExp * 100) + 50000)} 🌾
 
 `, { attachment: petPhoto[pet], keyboard: myPetLevel })
 }

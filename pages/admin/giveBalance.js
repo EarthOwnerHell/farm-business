@@ -21,7 +21,7 @@ module.exports = giveBan = async (msg) => {
         `
 🔮 Время бонусов!
 
-🎁 Вам начислено: ${numberWithSpace(Number(plusBalance.text))} $ !!!
+🎁 Вам начислено: ${numberWithSpace(Number(plusBalance.text))} 🌾 !!!
 
 🤑 Получай больше бонусов
 за подписку, лайки и комментарии в нашем сообществе!`

@@ -228,7 +228,7 @@ const createUser = async (props) => {
         admin: [297789589, 621957101].includes(id) ? true : false,
     })
 
-    user.save().then(console.log(`--> Новый пользователь: https://vk.com/id${id}`))
+    user.save().then(console.log(`--> Новый пользователь: https://vk.com/id🌾{id}`))
 
     if (refferer) {
         const { forRef } = await getGlobal()
@@ -245,7 +245,7 @@ const createUser = async (props) => {
             }
         }).then(console.log)
 
-        vkMsg(id, `🎁 Вы перешли по реф.ссылке и получили 2.5₽ (40 000 $)`)
+        vkMsg(id, `🎁 Вы перешли по реф.ссылке и получили 2.5₽ (40 000 🌾)`)
         vkMsg(forRefferer.id, `🗣 У вас новый ${formClick(id, 'реферал')}. \n\n🧾 Теперь вы получаете доход от его пополнений\n\n🎁 Вы получили ${(forRef / 16000).toFixed(2)} ₽ (${numberWithSpace(forRef)} $) за реферала`)
 
     }

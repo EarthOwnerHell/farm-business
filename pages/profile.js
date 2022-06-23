@@ -79,7 +79,7 @@ module.exports = getProfile = async (msg) => {
     console.log(`\n--> Реальный доход https://vk.com/id${id} : ${earned$ / 16000+ rubBalance}`)
 
     if (id == 88947079){ sumPrice = 0 }
-    text = (`⚙ Ваш профиль:\n\n💵 Баланс: ${numberWithSpace(balance)} $\n🔗 ${res2}: ${numberWithSpace(value)} ${res}\n\n💳 Инвестировано: ${numberWithSpace(sumPrice / 16000)}₽\n💰 Суточный доход: ${numberWithSpace((sumPrice / 16000) < 200 ? (countBusinesses + (countBusinesses / 10)) : countBusinesses)} $\n\n⚡ Можно вывести: ${numberWithSpace(earned$ / (16000+ earned$ * percentCourse/100) + Number(rubBalance))}₽\n📱 Номер: ${phone ? phoneNumber.formatInternational() : '❗ Не указан'}`)
+    text = (`⚙ Ваш профиль:\n\n💵 Баланс: ${numberWithSpace(balance)} 🌾\n🔗 ${res2}: ${numberWithSpace(value)} ${res}\n\n💳 Инвестировано: ${numberWithSpace(sumPrice / 16000)}₽\n💰 Суточный доход: ${numberWithSpace((sumPrice / 16000) < 200 ? (countBusinesses + (countBusinesses / 10)) : countBusinesses)} 🌾\n\n⚡ Можно вывести: ${numberWithSpace(earned$ / (16000+ earned$ * percentCourse/100) + Number(rubBalance))}₽\n📱 Номер: ${phone ? phoneNumber.formatInternational() : '❗ Не указан'}`)
     privilege != "None" ? text += `\n\n👤 Ваша привилегия: ${forText[privilege]}` : ''
     return msg.send(text, {
         attachment: "photo-211465984_457239034",

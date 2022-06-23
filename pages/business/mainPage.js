@@ -4,7 +4,7 @@ module.exports = businessPage = async (msg) => {
 
     const addElement = (title, count, forBuy, profit, photo_id, secondPayload) => ({
         title: `${title} (x${count})`,
-        description: `💳 Цена: ${forBuy} $\n⌛ Прибыль: ${profit} $ в сутки`,
+        description: `💳 Цена: ${forBuy} 🌾\n⌛ Прибыль: ${profit} 🌾 в сутки`,
         photo_id: `-${photo_id}`,
         "buttons": [
             {

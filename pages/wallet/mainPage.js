@@ -59,7 +59,7 @@ module.exports = mainPageWallet = async (msg) => {
                 title: '⬆ Пополнить',
                 description: `💵 Баланс: ${numberWithSpace(
                     earned$
-                )} $\n\n📊 ${numberWithSpace(buyCourse)} $ = 1₽`,
+                )} $\n\n📊 ${numberWithSpace(buyCourse)} 🌾 = 1₽`,
                 photo_id: '-211465984_457239087',
                 buttons: [
                     {

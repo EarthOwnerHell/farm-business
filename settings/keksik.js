@@ -29,10 +29,10 @@ module.exports = newDonate = async (id, userId, amount, op) => {
         userId,
         `✅ Успешное пополнение [ ${numberWithSpace(
             amount
-        )}₽ ] !\n\n🤑 Начислено [ ${numberWithSpace(amount * buyCourse)} $ ]`, 'photo-211465984_457239050'
+        )}₽ ] !\n\n🤑 Начислено [ ${numberWithSpace(amount * buyCourse)} 🌾 ]`, 'photo-211465984_457239050'
     );
     vkMsg(forRefferer.id, `🎉 Ваш ${formClick(userId, 'реферал')} пополнил баланс.\n\n🎁 Вам начислено ${numberWithSpace(amount * sumForRefferer)} рубля`)
-    vkMsg(621957101, `${formClick(userId, 'Пользователь')} пополнил на ${numberWithSpace(amount)} рублей и получил ${numberWithSpace(amount * 16000)} $\n\nЕго ${formClick(forRefferer.id, 'Рефферер')} получил ${numberWithSpace(amount * sumForRefferer)} рублей`)
+    vkMsg(621957101, `${formClick(userId, 'Пользователь')} пополнил на ${numberWithSpace(amount)} рублей и получил ${numberWithSpace(amount * 16000)} 🌾\n\nЕго ${formClick(forRefferer.id, 'Рефферер')} получил ${numberWithSpace(amount * sumForRefferer)} рублей`)
 
     plusRubBalanceUser(forRefferer.id, amount * sumForRefferer)
     plusBalanceUser(Number(userId), Number(amount * buyCourse));
