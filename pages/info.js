@@ -24,9 +24,9 @@ module.exports = infoPage = async (msg) => {
             users.filter((x) => x.ref.refferer !== 222856843).length
         )}\n\n💳 Инвестировано: ${numberWithSpace(
             allInvested
-        )} $\n\n💵 Всего заработано: ${numberWithSpace(
+        )} 🌾\n\n💵 Всего заработано: ${numberWithSpace(
             allWithdraw 
-        )} $\n🤑 Всего выведено: ${numberWithSpace(allWithdraw / 16000)}₽`,
+        )} 🌾\n🤑 Всего выведено: ${numberWithSpace(allWithdraw / 16000)}₽`,
         {
             keyboard: topBoard,
         }
