@@ -1,6 +1,7 @@
 const businessPage = require('../pages/business/mainPage')
 const getLvlOfRefs = require('../pages/refs/lvlsOfRef')
 const getProfile = require('../pages/profile')
+const howToRectify = require('../pages/howToRectify')
 const mainPageWallet = require('../pages/wallet/mainPage')
 //const accept = require('../pages/wallet/accept')
 const changeQiwi = require('../pages/changeQiwi')
@@ -29,6 +30,7 @@ module.exports = userManager = async (msg) => {
         changeNick: () => changeNick(msg),
         getBonus: () => getBonus(msg),
         myPet: () => myPet(msg),
+        howToRectify: () => howToRectify(msg),
         improvePet: () => myPetLevel(msg),
         managmentPrivilege: () => managmentPrivilege(msg),
         /* Бизнес сторона бота */
