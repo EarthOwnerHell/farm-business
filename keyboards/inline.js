@@ -196,6 +196,7 @@ module.exports = {
     acceptWithdrawn,
     reviewMenu,
     buyPet,
+    howToRectify,
     privilegesBuyButtons, 
     acceptButton,
     inlineProfileBoardPrivilege,
