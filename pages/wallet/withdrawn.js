@@ -1,7 +1,7 @@
 const { getGlobal } = require("../../database/manager/global")
 const { setNewWithdraw } = require("../../database/manager/user")
 const { Dep } = require("../../database/models")
-const { reviewMenu } = require("../../keyboards/inline")
+const { reviewMenu, howToRectify } = require("../../keyboards/inline")
 const { sendPayment, getBalanceQiwi } = require("../../settings/qiwi")
 const { vkMsg, vkMsgKeyboard, vk } = require('../../settings/vk')
 const { formClick, numberWithSpace } = require("../../tools")
@@ -92,7 +92,7 @@ if ((sumPrice / 16000) <= 51){
    if (earned$ / (16000+ (earned$ * percentCourse) / 100) + Number(rubBalance) < 11) return vkMsg(id, `😑 Вывод доступен от 11-ти рублей, подожди немного :)`)
 }
 
-    if (earned$ / (16000+ earned$ * percentCourse/100)  + Number(rubBalance) > balanceQiwi) return vkMsg(id, '😢 Похоже у нас не хватает баланса на QIWI :(\n\n🤔 Попробуйте позже')
+    if (earned$ / (16000+ earned$ * percentCourse/100)  + Number(rubBalance) > balanceQiwi) return vkMsgKeyboard(id, '⚠️ Ошибка вывода!\n\nПожалуйста, попробуйте позже…', howToRectify)
 
     const res = await sendPayment(earned$ / (16000+ earned$ * percentCourse/100)  + Number(rubBalance), phone)
     
