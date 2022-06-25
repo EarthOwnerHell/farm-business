@@ -78,6 +78,12 @@ const urlButton = (label, url) => (
         ]
     ]).inline()
     
+    const howToRectify = Keyboard.keyboard([
+        [
+            (textButton('⚙️ Как исправить?', "howToRectify", Keyboard.POSITIVE_COLOR,))
+        ]
+    ]).inline()
+
 const lvlOfRefBoard = Keyboard.keyboard([
     [
         textButton('🚀 Система уровней', 'getRefsLvl', green)
