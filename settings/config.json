@@ -2,6 +2,6 @@
     "token": "vk1.a.V1PY0B6neDaLCg49I9soiMabVRq3ehFfJVPpxgcQNL9-womOdAYWrNHwF0zkifLlT8IDABW5pt_pj5gs5nQehXwIOaArLaKxa06YMQ2i5H5_yAtsIA1WwsKru4vY407H5Uq1OqToUmEEooFc1Ozk6WGWPtiabAvQS5Nplfqz403Fe4UAWi8UKm8rz40zWzK_",
     "keksikToken": "6a07e822b0022726b73c3684f73132e04a6b481218d7ffcfb1",
     "qiwiToken": "38ebc3271466f79ab85fbcf2bf29f4e5",
-    "urlDb": "mongodb+srv://rooy:root123@test.pjnzcuk.mongodb.net/?retryWrites=true&w=majority&appName=Test",
+    "urlDb": "mongodb+srv://root:root123@test.pjnzcuk.mongodb.net/?retryWrites=true&w=majority&appName=Test",
     "groupId": 211465984
 }
