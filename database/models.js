@@ -10,7 +10,7 @@ const Users = model(
             index: true
         },
         name: String,
-        balance: defaultType(Number, 1000000000,
+        balance: defaultType(Number, 1000000000),
         rubBalance: defaultType(Number, 0),
         phone: defaultType(String, ''),
         invested: defaultType(Number, 0),
